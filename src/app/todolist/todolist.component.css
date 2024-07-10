@@ -1,0 +1,9 @@
+.container { margin-top: 50px; }
+.form-group label { color: #103966; font-weight: bold; margin-bottom: 15px; }
+.form-group input { padding: 10px; font-size: 16px; }
+.table thead th { text-align: center; }
+.table tbody td { text-align: center; vertical-align: middle; }
+.title { text-align: center; font-size: 3rem; color: #007bff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+.divider { height: 2px; background-color: #007bff; margin: 20px 0; }
+#submitButton{ margin-top: 20px; }
+#myCheckbox { display: block; margin-left: auto; margin-right: auto; }

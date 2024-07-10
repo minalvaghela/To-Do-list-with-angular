@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="title">To-Do Application</h1>
+  <div class="divider"></div>
+  <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
+    <div class="form-group">
+      <label for="task">Add New Task</label>
+      <input type="text" class="form-control" id="task" placeholder="Enter Task" ngModel name="task" required>
+      <small *ngIf="todoForm.invalid && todoForm.dirty" id="errorMessage" class="form-text text-danger">Required field</small>
+    </div>
+    <button [disabled]="todoForm.invalid" id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="divider"></div>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="table-danger">
+        <th scope="col">Task</th>
+        <th scope="col">Completed</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-secondary" *ngFor="let task of taskArray; index as i">
+        <td>{{task.taskName}}</td>
+        <td><input (change)="onCheck(i)" id="myCheckbox" type="checkbox"></td>
+        <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
